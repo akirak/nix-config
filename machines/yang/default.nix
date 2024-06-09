@@ -30,6 +30,7 @@ in
     ../../nixos/profiles/onedev
     ../../nixos/profiles/docker
     ../../nixos/profiles/reverse-proxy
+    ../../nixos/profiles/wireguard
     ../../nixos/profiles/acme/internal.nix
     ./fs
     ./boot.nix
