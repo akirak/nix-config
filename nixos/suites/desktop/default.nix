@@ -18,6 +18,7 @@
     pkgs.psmisc
     pkgs.handlr
     pkgs.libnotify
+    pkgs.wireguard-tools
   ] ++ lib.optional config.services.postgresql.enable pkgs.pgcli;
 
   environment.sessionVariables = {
