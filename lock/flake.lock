@@ -1733,11 +1733,11 @@
     "markdown-mode": {
       "flake": false,
       "locked": {
-        "lastModified": 1733792665,
-        "narHash": "sha256-7IHs0yB31afcBx6oKHpgztnIpgQ39J7Wd/u/sWT+V9A=",
+        "lastModified": 1736393022,
+        "narHash": "sha256-Sp5Wg44PEBXfwdybrt8Ai1GUKPLsv+2P2Sy1o2l2+Xw=",
         "owner": "jrblevin",
         "repo": "markdown-mode",
-        "rev": "8692afc12e13431efb0c302baee1de5bbf4a41e4",
+        "rev": "e1007785947ac8b32d8977a2843a11aded40682b",
         "type": "github"
       },
       "original": {
