@@ -772,11 +772,11 @@
     "dune": {
       "flake": false,
       "locked": {
-        "lastModified": 1735940699,
-        "narHash": "sha256-A4Km94Y1fzEgCK9EG200XW39Syh2/gJ9abqxnRMuN7Y=",
+        "lastModified": 1736462159,
+        "narHash": "sha256-vwezbRn6Fgf7CNs/O1PZdrBk3s20ZgWqAD25vqnGBv8=",
         "owner": "ocaml",
         "repo": "dune",
-        "rev": "6152ab8ec5d7204d792be7b094063c032bfdd3cc",
+        "rev": "098117d2290f144adc16840cf8baa6041ef0de5c",
         "type": "github"
       },
       "original": {
