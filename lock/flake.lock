@@ -1012,11 +1012,11 @@
     "erlang": {
       "flake": false,
       "locked": {
-        "lastModified": 1669987190,
-        "narHash": "sha256-x1/SCmLL+m69GgKJTet1wBy7mqYkEvV2aofj00IX77g=",
+        "lastModified": 1736514673,
+        "narHash": "sha256-FJ9Tiy30457j6Xd0gCOafTyRLuueSJlLvs4cym+WFOg=",
         "owner": "erlang",
         "repo": "otp",
-        "rev": "92cc932a687d016a0fce41992ff04235272be466",
+        "rev": "9c918d8194c4af9f9dfd86b920b84e28554c7af2",
         "type": "github"
       },
       "original": {
