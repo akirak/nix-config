@@ -291,11 +291,11 @@
     "casual": {
       "flake": false,
       "locked": {
-        "lastModified": 1734737488,
-        "narHash": "sha256-vbqHO4wsmLFdfbkHf8KidWcgrskTRsjryAxkj0NuM1Q=",
+        "lastModified": 1736207657,
+        "narHash": "sha256-BKJXgLJnQwnI6/11ztITz4nW8LTbrlJlx/CoktrUkXQ=",
         "owner": "kickingvegas",
         "repo": "casual",
-        "rev": "66771bf3b1b947a8586d38ba72e689c7f09c438b",
+        "rev": "2d1cfd6fe4b16393770a7826026b48948eccb02a",
         "type": "github"
       },
       "original": {
