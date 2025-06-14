@@ -24,6 +24,11 @@
       inputs.home-manager.follows = "home-manager-unstable";
     };
 
+    microvm = {
+      url = "github:astro/microvm.nix";
+      inputs.nixpkgs.follows = "unstable";
+    };
+
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "unstable";
