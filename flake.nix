@@ -10,7 +10,6 @@
 
     home-manager-stable.url = "github:nix-community/home-manager/release-25.05";
     home-manager-unstable.url = "github:nix-community/home-manager";
-    nix-darwin.url = "github:LnL7/nix-darwin";
 
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 
@@ -18,6 +17,12 @@
     home-manager-unstable.inputs.nixpkgs.follows = "unstable";
 
     flake-parts.url = "github:hercules-ci/flake-parts";
+
+    denix = {
+      url = "github:yunfachi/denix";
+      inputs.nixpkgs.follows = "unstable";
+      inputs.home-manager.follows = "home-manager-unstable";
+    };
 
     disko = {
       url = "github:nix-community/disko";
