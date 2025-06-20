@@ -45,6 +45,7 @@ in
 
       customPackages.codex-cli
       unstable-small-unfree.claude-code
+      unstable-small-unfree.opencode
 
       # Used to run MCP servers.
       (onlySingleBin pkgs.nodejs "npx")
