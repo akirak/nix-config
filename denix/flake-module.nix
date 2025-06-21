@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ lib, inputs, ... }:
 let
   inherit (inputs) denix;
 
@@ -18,10 +18,22 @@ let
         inherit inputs;
       };
     };
+
+  isMicroVM = toplevel: toplevel.config.myconfig.microvm.enable;
+
+  excludeMicroVMs = lib.filterAttrs (_: isMicroVM);
+
+  getMicroVMRunner = name:
+    let
+      host = (mkConfigurations "nixos").${name};
+    in
+      host.config.microvm.runner.${host.config.myconfig.microvm.hypervisor};
 in
-{
-  flake = {
-    # nixosConfigurations = mkConfigurations "nixos";
-    # homeConfigurations = mkConfigurations "home";
-  };
-}
+  {
+    flake = {
+      nixosConfigurations = excludeMicroVMs (mkConfigurations "nixos");
+      homeConfigurations = mkConfigurations "home";
+
+      packages.x86_64-linux.denix-sandbox = getMicroVMRunner "denix-sandbox";
+    };
+  }
