@@ -2,3 +2,4 @@
 *.img
 result*
 .pre-commit-config.yaml
+*.sock
