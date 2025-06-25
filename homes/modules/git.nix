@@ -122,6 +122,8 @@ in
         "result-*"
         "#*"
         ".git-bak*"
+        "*.local"
+        "*.local.*"
         ".aider*"
         # Non-standard
         "!.aider.conf.yml"
