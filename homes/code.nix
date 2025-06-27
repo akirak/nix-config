@@ -25,15 +25,6 @@ let
     ) { });
 in
 {
-  # Custom module
-  programs.aider = {
-    enable = true;
-    age = {
-      identityFile = lib.mkDefault ../secrets/yubikey.pub;
-      envFile = lib.mkDefault ../secrets/aider-env.age;
-    };
-  };
-
   programs.uv.enable = true;
 
   home.packages =
@@ -44,6 +35,7 @@ in
       just-lsp
 
       customPackages.codex-cli
+      unstable-small-unfree.aider-chat
       unstable-small-unfree.claude-code
       unstable-small-unfree.opencode
       unstable-small-unfree.gemini-cli
