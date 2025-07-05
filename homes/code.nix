@@ -27,6 +27,11 @@ in
 {
   programs.uv.enable = true;
 
+  programs.claude-code = {
+    enable = true;
+    package = pkgs.unstable-small-unfree.claude-code;
+  };
+
   home.packages =
     (with pkgs; [
       yamlfmt
@@ -36,7 +41,6 @@ in
 
       customPackages.codex-cli
       unstable-small-unfree.aider-chat
-      unstable-small-unfree.claude-code
       unstable-small-unfree.opencode
       unstable-small-unfree.gemini-cli
 

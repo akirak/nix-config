@@ -27,6 +27,10 @@ in
           buildInputs = [
             pkgs.age
             pkgs.age-plugin-yubikey
+
+            # This is not related to agenix.
+            # It is just a program required for maintaining this configuration.
+            pkgs.deno
           ];
           nativeBuildInputs = [ inputs.agenix-rekey.packages.${system}.default ];
         };
