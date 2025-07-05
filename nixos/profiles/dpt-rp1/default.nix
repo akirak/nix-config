@@ -11,8 +11,16 @@
     pkgs.picocom
   ];
 
+  # The current PIDs.
+
+  # ids = {
+  #   uids.avahi = 991;
+  #   gids.avahi = 989;
+  # };
+
   services.avahi = {
-    enable = true;
+    # enable = true;
+
     # Check the interface name
     allowInterfaces = [
       "usb1"
