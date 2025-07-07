@@ -16,17 +16,32 @@ interface NotificationData {
 
 async function main() {
   try {
-    // Read JSON data from stdin
+    // Read all JSON data from stdin until EOF
     const decoder = new TextDecoder();
-    const input = new Uint8Array(4096);
-    const bytesRead = await Deno.stdin.read(input);
+    const chunks: Uint8Array[] = [];
+    const buffer = new Uint8Array(4096);
 
-    if (!bytesRead) {
+    while (true) {
+      const bytesRead = await Deno.stdin.read(buffer);
+      if (!bytesRead) break;
+      chunks.push(buffer.slice(0, bytesRead));
+    }
+
+    if (chunks.length === 0) {
       console.error("No input received from stdin");
       Deno.exit(1);
     }
 
-    const jsonText = decoder.decode(input.slice(0, bytesRead));
+    // Concatenate all chunks
+    const totalLength = chunks.reduce((sum, chunk) => sum + chunk.length, 0);
+    const allData = new Uint8Array(totalLength);
+    let offset = 0;
+    for (const chunk of chunks) {
+      allData.set(chunk, offset);
+      offset += chunk.length;
+    }
+
+    const jsonText = decoder.decode(allData);
     const data: NotificationData = JSON.parse(jsonText);
 
     // Validate required fields
