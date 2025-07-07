@@ -1,7 +1,14 @@
-{ lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 let
+  cfg = config.programs.claude-code;
+
   notifyDesktop = pkgs.writeShellApplication {
-    name = "claude-code-notify-desktop";
+    name = "claude-notify-desktop";
     runtimeInputs = with pkgs; [
       deno
       notify-desktop
@@ -16,14 +23,16 @@ in
     ./interface.nix
   ];
 
+  home.packages = lib.optional cfg.enable notifyDesktop;
+
   programs.claude-code = {
-    settings.hooks = {
-      Notification = [
-        {
-          matcher = "Bash";
-          command = lib.getExe notifyDesktop;
-        }
-      ];
-    };
+    # settings.hooks = {
+    #   Notification = [
+    #     {
+    #       matcher = "Bash";
+    #       command = lib.getExe notifyDesktop;
+    #     }
+    #   ];
+    # };
   };
 }

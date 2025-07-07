@@ -18,11 +18,11 @@ in {
         description = "The claude-code package to install.";
       };
 
-      settings = mkOption {
-        type = types.attrs;
-        default = {};
-        description = "User-wide options for Claude Code.";
-      };
+      # settings = mkOption {
+      #   type = types.attrs;
+      #   default = {};
+      #   description = "User-wide options for Claude Code.";
+      # };
     };
   };
 
@@ -31,6 +31,6 @@ in {
       cfg.package
     ];
 
-    home.file.".claude/settings.json".text = builtins.toJSON cfg.settings;
+    # home.file.".claude/settings.json".text = builtins.toJSON cfg.settings;
   };
 }
