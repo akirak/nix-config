@@ -34,6 +34,7 @@ in
     home.packages = [
       (pkgs.writeShellScriptBin "nixos-rebuild-and-notify" ''
         operation="''${1:-switch}"
+        shift
 
         if emacs_config="$(readlink -e "${cfg.emacsConfigDirectory}")"
         then
@@ -57,7 +58,8 @@ in
              --print-out-paths \
              --no-link \
              --print-build-logs \
-             ''${build_flags[@]})
+             ''${build_flags[@]}) \
+             "''${@}"
            if [[ $? -eq 0 ]]
            then
              sudo nix-env -p /nix/var/nix/profiles/system --set "$artifact" \
@@ -67,7 +69,7 @@ in
            fi
         }
 
-        if build_and_switch; then
+        if build_and_switch "''${@}"; then
           ${notify} -t 5000 "nixos-rebuild $operation has finished successfully"
         else
           ${notify} -t 5000 "nixos-rebuild $operation has failed"
