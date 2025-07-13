@@ -228,11 +228,11 @@
         "twist2elpa": "twist2elpa"
       },
       "locked": {
-        "lastModified": 1752386036,
-        "narHash": "sha256-9s8wLcaRaQt/u7k/Cg1RxgjWYPN4vlrfmqOVuAGNEC0=",
+        "lastModified": 1752388009,
+        "narHash": "sha256-KwWHbIqJYRwgaU1HG7ZN/vVyBKjyS3GazQmCu8Fwu2Q=",
         "owner": "akirak",
         "repo": "emacs-config",
-        "rev": "63e7b6b429222dc8d2f154079e37712c22993979",
+        "rev": "b268c862777d110947b5b9d2b828a82983d7c3ff",
         "type": "github"
       },
       "original": {
@@ -843,6 +843,26 @@
       "original": {
         "owner": "nix-community",
         "repo": "impermanence",
+        "type": "github"
+      }
+    },
+    "mcp-servers": {
+      "inputs": {
+        "nixpkgs": [
+          "unstable"
+        ]
+      },
+      "locked": {
+        "lastModified": 1752226404,
+        "narHash": "sha256-9mkYRU/aK3T2zLbpVBQ1AH4BO+O7y2OhYYsXbSRwf6g=",
+        "owner": "natsukium",
+        "repo": "mcp-servers-nix",
+        "rev": "c7e681714052b45627a50f4b5f7c1c3ea0ab8c27",
+        "type": "github"
+      },
+      "original": {
+        "owner": "natsukium",
+        "repo": "mcp-servers-nix",
         "type": "github"
       }
     },
@@ -1551,6 +1571,7 @@
         "home-manager-unstable": "home-manager-unstable_3",
         "hyprland-contrib": "hyprland-contrib",
         "impermanence": "impermanence",
+        "mcp-servers": "mcp-servers",
         "microvm": "microvm",
         "nix-index-database": "nix-index-database",
         "nixos-hardware": "nixos-hardware",
