@@ -40,6 +40,11 @@
     agenix-rekey.url = "github:oddlama/agenix-rekey";
     agenix-rekey.inputs.nixpkgs.follows = "unstable";
 
+    mcp-servers = {
+      url = "github:natsukium/mcp-servers-nix";
+      inputs.nixpkgs.follows = "unstable";
+    };
+
     # cachix-deploy-flake = {
     #   url = "github:cachix/cachix-deploy-flake";
     #   inputs.nixpkgs.follows = "stable";
