@@ -38,6 +38,7 @@ in
     ../../nixos/profiles/virtualbox-host
     ../../nixos/profiles/dpt-rp1
     ../../nixos/profiles/podman/rootless-docker.nix
+    ../../nixos/profiles/ai-mcp
     # ../../nixos/profiles/docker/rootless.nix
     # ../../nixos/profiles/docker
     # ../../nixos/profiles/docker/kind.nix
