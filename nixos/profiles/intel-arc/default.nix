@@ -11,7 +11,6 @@
       intel-ocl
       # nixos-unstable
       vpl-gpu-rt
-      intel-media-sdk
       intel-compute-runtime
       intel-vaapi-driver
     ];
