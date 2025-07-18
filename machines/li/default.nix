@@ -114,7 +114,7 @@ in
   };
 
   services.my-livebook = {
-    enable = true;
+    enable = false;
     settings = {
       ipAddress = "127.0.0.1";
       port = 8200;
