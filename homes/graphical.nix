@@ -74,6 +74,11 @@ in
       customFontPackages.jetbrains-mono-nerdfont
       # Japanese
       ipafont
+
+      # fonts used on my website
+      manrope
+      source-serif
+      dm-mono
     ])
     ++ lib.optionals enableWayland [
       pkgs.wayshot
