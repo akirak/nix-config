@@ -24,4 +24,10 @@
       "/etc/NetworkManager/system-connections"
     ];
   };
+
+  virtualisation.containers.containersConf.settings = {
+    engine.env = [
+      "TMPDIR=/var/tmp"
+    ];
+  };
 }
