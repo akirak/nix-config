@@ -1,3 +1,7 @@
+{ homeUser, ... }:
+let
+  tmpDir = "/var/tmp";
+in
 {
   imports = [ ./extras.nix ];
 
@@ -25,9 +29,10 @@
     ];
   };
 
-  virtualisation.containers.containersConf.settings = {
-    engine.env = [
-      "TMPDIR=/var/tmp"
-    ];
+  home-manager.users.${homeUser} = {
+    programs.zsh.sessionVariables = {
+      # Affect rootless `podman pull`
+      TMPDIR = tmpDir;
+    };
   };
 }
