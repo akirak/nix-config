@@ -1,6 +1,8 @@
 { inputs, ... }:
 let
-  channel = inputs.unstable;
+  # Pin to Linux 6.15 until OpenZFS supports a newer version.
+  # Check https://endoflife.date/openzfs
+  channel = inputs.unstable-202507;
 in
 {
   flake = {

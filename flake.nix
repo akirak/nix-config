@@ -5,6 +5,8 @@
     unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     stable.url = "github:NixOS/nixpkgs/nixos-25.05";
 
+    unstable-202507.url = "github:NixOS/nixpkgs/62e0f05ede1da0d54515d4ea8ce9c733f12d9f08";
+
     # More frequently input to use the newer versions of packages.
     unstable-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
 
