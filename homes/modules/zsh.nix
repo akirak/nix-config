@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
   home.packages = with pkgs; [
     zsh
@@ -10,7 +10,7 @@
     enable = true;
     autosuggestion.enable = true;
     enableCompletion = true;
-    dotDir = ".config/zsh";
+    dotDir = "${config.xdg.configHome}/zsh";
     defaultKeymap = "emacs";
     history = {
       expireDuplicatesFirst = true;
