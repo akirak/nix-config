@@ -15,6 +15,8 @@ in
     ./fs
     ./boot.nix
 
+    ../../nixos/profiles/networking/r8168.nix
+
     # Create a non-wheel user for hosting some personal data.
     ../../nixos/profiles/users/1000/on-server.nix
   ];

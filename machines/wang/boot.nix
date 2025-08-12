@@ -4,12 +4,6 @@
   ...
 }:
 {
-  boot.extraModulePackages = [
-    (config.boot.kernelPackages.r8168.overrideAttrs (
-      import ../../modules/overrides/r8168.nix { inherit pkgs; }
-    ))
-  ];
-
   boot.loader = {
     efi.canTouchEfiVariables = false;
     systemd-boot.enable = true;
