@@ -74,6 +74,8 @@ in
 
     # Install Cloud Hypervisor for use with MicroVM
     pkgs.cloud-hypervisor
+
+    pkgs.lmstudio
   ];
 
   services.journald.extraConfig = ''
