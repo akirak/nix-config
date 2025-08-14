@@ -191,6 +191,7 @@ in
     programs.emacs-twist = {
       enable = true;
       settings = {
+        enableJava = true;
         extraFeatures = [
           "beancount"
           "OCaml"
