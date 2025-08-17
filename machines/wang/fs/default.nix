@@ -10,7 +10,7 @@ in
       device = decryptedDevice;
     })
     ./storage1.nix
-    ./annex.nix
+    # ./annex.nix
   ];
 
   boot.initrd.luks.devices.${cryptBtrfs} = {
@@ -60,12 +60,12 @@ in
     enable = true;
     devices = [
       { device = systemSsd; }
-      {
-        device = "/dev/disk/by-id/ata-TOSHIBA_MG08ADA800E_74G0A1ZQFCXH";
-      }
-      {
-        device = "/dev/disk/by-id/ata-TOSHIBA_MG08ADA800E_74G0A203FCXH";
-      }
+      # {
+      #   device = "/dev/disk/by-id/ata-TOSHIBA_MG08ADA800E_74G0A1ZQFCXH";
+      # }
+      # {
+      #   device = "/dev/disk/by-id/ata-TOSHIBA_MG08ADA800E_74G0A203FCXH";
+      # }
     ];
   };
 }
