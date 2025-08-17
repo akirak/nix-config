@@ -17,6 +17,11 @@
     ext4 = true;
   };
 
+  boot.kernelModules = [
+    # Force loading ext4 as the hardened kernel may block this
+    "ext4"
+  ];
+
   boot.initrd = {
     enable = true;
 
