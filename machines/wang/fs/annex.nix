@@ -2,24 +2,24 @@
   boot.initrd.luks.reusePassphrases = true;
 
   boot.initrd.luks.devices = {
-    annex1 = {
-      device = "/dev/disk/by-partuuid/31efb973-e795-4dcf-b72b-19cc7faefb14";
+    annex3 = {
+      device = "/dev/disk/by-partuuid/52d4b016-9e9c-4b1e-b830-1d817e4f25f1";
     };
-    annex2 = {
-      device = "/dev/disk/by-partuuid/a3e493bc-346d-4df0-9491-3d6bb986a0ed";
+    annex4 = {
+      device = "/dev/disk/by-partuuid/715e32cf-5686-4e68-9b6b-b8075675e2fa";
     };
   };
 
   fileSystems = {
-    "/git-annex/wang-annex1" = {
-      device = "/dev/mapper/annex1";
+    "/git-annex/wang-annex3" = {
+      device = "/dev/mapper/annex3";
       fsType = "ext4";
       options = [
         "noatime"
       ];
     };
-    "/git-annex/wang-annex2" = {
-      device = "/dev/mapper/annex2";
+    "/git-annex/wang-annex4" = {
+      device = "/dev/mapper/annex4";
       fsType = "ext4";
       options = [
         "noatime"

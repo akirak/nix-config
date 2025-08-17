@@ -10,7 +10,7 @@ in
       device = decryptedDevice;
     })
     ./storage1.nix
-    # ./annex.nix
+    ./annex.nix
   ];
 
   boot.initrd.luks.devices.${cryptBtrfs} = {
