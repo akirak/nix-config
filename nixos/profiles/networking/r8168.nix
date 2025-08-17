@@ -23,5 +23,4 @@
       }
     ))
   ];
-  boot.blacklistedKernelModules = [ "r8169" ];
 }
