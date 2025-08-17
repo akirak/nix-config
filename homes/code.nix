@@ -34,7 +34,7 @@ in
       nil # Nix
       just-lsp
 
-      customPackages.codex-cli
+      unstable-small-unfree.codex
       unstable-small-unfree.aider-chat
       unstable-small-unfree.claude-code
       unstable-small-unfree.opencode
