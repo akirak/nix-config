@@ -61,10 +61,10 @@ in
     devices = [
       { device = systemSsd; }
       {
-        device = "/dev/disk/by-id/ata-TOSHIBA_MG08ADA800E_74G0A1ZQFCXH";
+        device = "/dev/disk/by-id/ata-ST12000VE0007-2JZ116_ZJV0672D";
       }
       {
-        device = "/dev/disk/by-id/ata-TOSHIBA_MG08ADA800E_74G0A203FCXH";
+        device = "/dev/disk/by-id/ata-ST12000VE0007-2JZ116_ZJV458M0";
       }
     ];
   };
