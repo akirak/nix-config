@@ -110,7 +110,7 @@ in
     enable = true;
     settings.default_session = {
       # You have to install *.desktop files to the directory
-      command = "${pkgs.tuigreet}/bin/tuigreet -t -s /etc/wayland-sessions";
+      command = "${pkgs.greetd.tuigreet}/bin/tuigreet -t -s /etc/wayland-sessions";
       user = homeUser;
     };
   };
