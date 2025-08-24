@@ -70,6 +70,9 @@ in
       # database admin
       # beekeeper-studio
 
+      # graphics
+      drawio
+
       # fonts
       customFontPackages.jetbrains-mono-nerdfont
       # Japanese

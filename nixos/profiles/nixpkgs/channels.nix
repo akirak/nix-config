@@ -22,6 +22,7 @@
         "copilot-language-server"
         "tokenizer.json"
         "lmstudio"
+        "drawio"
       ];
   };
 }
