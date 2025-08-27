@@ -203,7 +203,7 @@ in
           "MCP"
           "writing"
           # "Coq"
-          # "Lean4"
+          "Lean4"
           # "lsp_mode"
         ];
       };
