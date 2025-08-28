@@ -40,6 +40,8 @@ in
       ai-tools.opencode
       unstable-small-unfree.gemini-cli
 
+      serena
+
       # Used to run MCP servers.
       (onlySingleBin pkgs.nodejs "npx")
     ])
