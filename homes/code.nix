@@ -34,10 +34,10 @@ in
       nil # Nix
       just-lsp
 
-      unstable-small-unfree.codex
+      ai-tools.codex
       unstable-small-unfree.aider-chat
-      unstable-small-unfree.claude-code
-      unstable-small-unfree.opencode
+      ai-tools.claude-code
+      ai-tools.opencode
       unstable-small-unfree.gemini-cli
 
       # Used to run MCP servers.

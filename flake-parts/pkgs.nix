@@ -18,6 +18,7 @@ let
       };
       # unstable-small = inputs.unstable-small.legacyPackages.${prev.system};
       mcp-servers = inputs.mcp-servers.packages.${prev.system};
+      ai-tools = inputs.nix-ai-tools.packages.${prev.system};
       disko = inputs.disko.packages.${prev.system}.disko;
       nix-index = inputs.nix-index-database.packages.${prev.system}.nix-index-with-db;
     })
