@@ -204,6 +204,7 @@ in
           "writing"
           # "Coq"
           "Lean4"
+          "media"
           # "lsp_mode"
         ];
       };
