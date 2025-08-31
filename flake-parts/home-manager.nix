@@ -27,5 +27,55 @@
         ];
       };
     };
+
+    homeConfigurations = (
+      builtins.listToAttrs
+        (builtins.map
+          # Build the minimal home-manager configuration
+          (system: lib.nameValuePair "${system}-default"
+            (inputs.home-manager-unstable.lib.homeManagerConfiguration {
+              pkgs = import inputs.unstable {
+                inherit system;
+                overlays = [ inputs.self.overlays.default ];
+                config.allowUnfree = true;
+              };
+
+              modules = [
+                {
+                  home.username = lib.mkDefault "akirakomamura";
+                  home.stateVersion = lib.mkDefault "25.05";
+                }
+                inputs.self.homeModules.default
+              ];
+            })
+          )
+
+          [
+            "x86_64-linux"
+            "aarch64-darwin"
+          ] )
+    ) // {
+      # Examples
+      x86_64-linux-extra = inputs.self.homeConfigurations.x86_64-linux-default.extendModules {
+        modules = [
+          {
+            home.username = "anotherUser";
+            programs.gpg.enable = true;
+            programs.emacs-twist = {
+              enable = true;
+              settings = {
+                extraFeatures = [
+                  "Org"
+                  "Emacs__Lisp"
+                  "Emacs"
+                  "MCP"
+                ];
+              };
+            };
+          }
+        ];
+      };
+
+    };
   };
 }
