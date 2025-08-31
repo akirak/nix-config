@@ -15,7 +15,6 @@
     gh
     difftastic
     duckdb
-    tbls
     hyperfine
     just
     tailspin
