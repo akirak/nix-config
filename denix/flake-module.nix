@@ -35,7 +35,9 @@ in
 {
   flake = {
     nixosConfigurations = excludeMicroVMs (mkConfigurations "nixos");
-    homeConfigurations = mkConfigurations "home";
+
+    # Prevent the duplicate definition. See flake-parts/home-manager.nix
+    # homeConfigurations = mkConfigurations "home";
 
     packages.x86_64-linux.denix-sandbox = getMicroVMRunner "denix-sandbox";
   };
