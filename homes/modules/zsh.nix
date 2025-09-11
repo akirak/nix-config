@@ -223,8 +223,6 @@
       ".." = "cd ..";
       "..." = "cd ../..";
       "rm" = "rm -i";
-      "j" = "journalctl -xe";
-      "e" = "emacsclient -n";
       "start" = "systemctl --user start";
       "stop" = "systemctl --user stop";
       "enable" = "systemctl --user enable";
