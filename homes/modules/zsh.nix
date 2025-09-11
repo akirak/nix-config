@@ -6,6 +6,8 @@
     fzy
   ];
 
+  programs.nix-your-shell.enableZshIntegration = true;
+
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;
@@ -44,7 +46,6 @@
 
     sessionVariables = {
       "DIRSTACKSIZE" = "20";
-      "NIX_BUILD_SHELL" = "zsh";
       # "VAGRANT_WSL_WINDOWS_ACCESS" = "1";
       # Set locale archives
       # https://github.com/NixOS/nixpkgs/issues/38991
@@ -204,8 +205,6 @@
           \"$*\"
           :body (format \"[[file:%s]]\n%%?\" (abbreviate-file-name \"$PWD/\")))"
       }
-
-      export NIX_BUILD_SHELL=bash
 
       export EDITOR=emacsclient
 

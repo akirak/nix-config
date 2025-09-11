@@ -10,6 +10,10 @@
       # clean.enable = true;
       flake = "${config.home.homeDirectory}/build/nix-config";
     };
+
+    nix-your-shell = {
+      enable = true;
+    };
   };
 
   home.packages = with pkgs; [
