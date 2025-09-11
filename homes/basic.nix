@@ -1,9 +1,15 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 {
   programs = {
     nix-index.enable = true;
     nix-index.enableZshIntegration = config.programs.nix-index.enable;
     password-store.enable = true;
+
+    nh = {
+      enable = lib.mkDefault true;
+      # clean.enable = true;
+      flake = "${config.home.homeDirectory}/build/nix-config";
+    };
   };
 
   home.packages = with pkgs; [

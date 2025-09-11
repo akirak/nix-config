@@ -1,5 +1,6 @@
 {
   modulesPath,
+  homeUser,
   pkgs,
   lib,
   config,
@@ -37,4 +38,11 @@
   '';
 
   programs.nix-ld.enable = true;
+
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    clean.extraArgs = lib.mkDefault "--keep-since 18d --keep 3";
+    flake = "/home/${homeUser}/build/nix-config";
+  };
 }

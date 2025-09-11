@@ -38,6 +38,9 @@ You also have to import home-manager.nixosModules.home-manager
         ../../../homes/core.nix
       ];
 
+      # Conflicts with the NixOS setting
+      programs.nh.enable = false;
+
       programs.nixos-rebuild-and-notify.enable = true;
 
       home.stateVersion = lib.mkDefault config.system.stateVersion;
