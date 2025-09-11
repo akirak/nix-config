@@ -8,4 +8,11 @@
     du-dust
     iotop
   ];
+
+  nix = {
+    settings = {
+      auto-optimise-store = true;
+    };
+    gc.automatic = true;
+  };
 }
