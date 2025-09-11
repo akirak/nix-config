@@ -18,17 +18,6 @@ in {
         default = config.targets.genericLinux.enable || pkgs.stdenv.isDarwin;
       };
 
-      name = lib.mkOption {
-        type = types.str;
-        description = "Name of the home-manager configuration";
-      };
-
-      configDirectory = lib.mkOption {
-        type = types.str;
-        description = "Directory containing the home-manager configuration";
-        default = "$HOME/build/nix-config";
-      };
-
       emacsConfigDirectory = lib.mkOption {
         type = types.str;
         description = "Directory containing the Emacs configuration";
@@ -40,21 +29,20 @@ in {
   config = lib.mkIf cfg.enable {
     home.packages = [
       (pkgs.writeShellScriptBin "rebuild-home" ''
+        flake="${config.programs.nh.flake}"
+
+        operation="''${1:-switch}"
+        shift
+
         emacs_config="${cfg.emacsConfigDirectory}"
         if [[ -d "''${emacs_config}" ]]
         then
-          flags=(--override-input emacs-config $(readlink -f "''${emacs_config}")
-                 --override-input emacs-config/flake-pins github:akirak/flake-pins)
+          flags=(--override-input emacs-config "path:$(readlink -f "''${emacs_config}")")
         else
           flags=()
         fi
 
-        cd "${cfg.configDirectory}"
-        if ${pkgs.nix-output-monitor}/bin/nom build "#homeConfigurations.${cfg.name}" \
-            --option accept-flake-config true \
-            --print-build-logs \
-            ''${flags[@]} \
-            && result/activate; then
+        if ${lib.getExe pkgs.nh} home "$operation" "$flake" -- ''${build_flags[@]} "''${@}"; then
           ${notify} -t 5000 'Successfully switched to a new home-manager generation'
         else
           ${notify} -t 5000 'Failed to switch to a new home-manager generation'
