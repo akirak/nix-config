@@ -25,7 +25,7 @@ in
     ../../nixos/profiles/home-manager
     ../../nixos/profiles/nix
     ../../nixos/profiles/sudo
-    ../../nixos/profiles/tailscale
+    # ../../nixos/profiles/tailscale
     # ../../nixos/profiles/rabbitmq/development.nix
     ../../nixos/profiles/networking/usb-tether1.nix
     ../../nixos/profiles/wayland/wm/hyprland.nix
