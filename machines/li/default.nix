@@ -64,6 +64,9 @@ in
   networking = {
     useDHCP = false;
     networkmanager.enable = true;
+    networkmanager.unmanaged = [
+      "type:wireguard"
+    ];
   };
   # systemd.services.NetworkManager-wait-online.enable = true;
 
