@@ -24,10 +24,7 @@
     nixpkgs,
     flake-parts,
     ...
-  } @ inputs: let
-    inherit (nixpkgs) lib;
-  in
-    flake-parts.lib.mkFlake {inherit inputs;} {
+  } @ inputs: flake-parts.lib.mkFlake {inherit inputs;} {
       systems = [
         "x86_64-linux"
       ];

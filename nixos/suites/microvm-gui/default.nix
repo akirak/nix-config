@@ -3,7 +3,7 @@ MicroVM with GUI for rapid prototyping of a desktop environment
 
 Based on https://github.com/astro/microvm.nix/blob/main/flake.nix
 */
-{config, ...}: let
+{ ...}: let
   xrdpPort = 3389;
 in {
   imports = [

@@ -25,7 +25,6 @@
   };
 
   outputs = {
-    self,
     nixpkgs,
     flake-parts,
     home-manager,

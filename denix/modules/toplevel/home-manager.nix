@@ -1,7 +1,6 @@
 {
   delib,
   moduleSystem,
-  home-manager,
   homeManagerUser,
   config,
   constants,
