@@ -50,4 +50,8 @@ in
       # Sandbox MCP scripts
       pkgs.bubblewrap
     ]);
+
+  home.file.".npmrc".text = lib.mkDefault ''
+    ignore-scripts=true
+  '';
 }

@@ -164,6 +164,8 @@ in
       fetch-retries = 5
       # Required because of ZFS
       package-import-method=copy
+
+      ignore-scripts=true
     '';
 
     services.kanshi.settings = [
