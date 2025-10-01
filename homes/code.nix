@@ -38,6 +38,7 @@ in
       unstable-small-unfree.aider-chat
       ai-tools.claude-code
       ai-tools.opencode
+      ai-tools.copilot-cli
       unstable-small-unfree.gemini-cli
 
       serena
