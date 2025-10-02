@@ -47,8 +47,6 @@
 
     nix-ai-tools.url = "github:numtide/nix-ai-tools";
 
-    serena.url = "github:oraios/serena";
-
     # cachix-deploy-flake = {
     #   url = "github:cachix/cachix-deploy-flake";
     #   inputs.nixpkgs.follows = "stable";
