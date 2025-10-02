@@ -1,0 +1,23 @@
+name: Update selected tools
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '5 0 1/3 * *'
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: develop
+      - name: Set up Nix
+        uses: ./.github/actions/setup
+        with:
+          cachix-token: ${{ secrets.CACHIX_AUTH_TOKEN }}
+      - run: nix flake update unstable-small nix-ai-tools
+      - uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.PAT_FOR_PR }}
+          title: 'chore: Update tools'
+          branch: bot/update/ai-tools
+          labels: automation,update
