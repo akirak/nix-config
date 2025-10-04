@@ -7,7 +7,7 @@ in
     description = "MCP Server for Context7";
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {
-      ExecStart = "${lib.getExe pkgs.mcp-servers.context7-mcp} --transport sse --port ${builtins.toString port}";
+      ExecStart = "${lib.getExe pkgs.mcp-servers.context7-mcp} --transport http --port ${builtins.toString port}";
 
       # Sandboxing options
       DynamicUser = true;
