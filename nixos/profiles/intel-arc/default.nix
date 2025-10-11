@@ -29,7 +29,7 @@
   hardware.intelgpu.driver = "xe";
 
   # Use the latest kernel for the intel driver that supports ZFS
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
 
   environment.systemPackages = with pkgs; [
     libva-utils
