@@ -34,7 +34,7 @@ in
     # ../../nixos/profiles/nix/cachix-deploy.nix
     ../../nixos/profiles/postgresql/development.nix
     ../../nixos/profiles/livebook
-    ../../nixos/profiles/virtualbox-host
+    # ../../nixos/profiles/virtualbox-host
     # ../../nixos/profiles/ollama
     ../../nixos/profiles/dpt-rp1
     ../../nixos/profiles/podman/rootless-docker.nix
