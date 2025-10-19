@@ -68,6 +68,9 @@
       inputs.twist.follows = "twist";
     };
     twist.url = "github:emacs-twist/twist.nix";
+
+    # Just don't override the nixpkgs input so I can utilize the binary cache.
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
   nixConfig = {
@@ -101,6 +104,7 @@
         ./flake-parts/emacs.nix
         ./flake-parts/nixos.nix
         ./flake-parts/home-manager.nix
+        ./flake-parts/home-inputs.nix
         # ./flake-parts/cachix-deploy.nix
 
         ./templates/flake-module.nix

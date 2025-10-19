@@ -17,6 +17,7 @@ in
         inputs.home-manager-unstable.nixosModules.home-manager
         inputs.nixos-hardware.nixosModules.common-gpu-intel
         inputs.self.nixosModules.twistHomeModule
+        inputs.self.nixosModules.homeInputs
         inputs.self.nixosModules.default
         ./.
         {

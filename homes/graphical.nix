@@ -32,8 +32,9 @@ in
     foot.settings.main.font = "JetBrainsMono NF:size=10.5";
 
     # See modules/librewolf.nix for details
-    librewolf.enable = true;
+    # librewolf.enable = true;
     # firefox.enable = true;
+    zen-browser.enable = true;
 
     # AI coding (Cline)
     # vscode.enable = true;

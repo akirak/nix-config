@@ -17,6 +17,7 @@ in
         inputs.home-manager-unstable.nixosModules.home-manager
         inputs.self.nixosModules.asus-br1100
         inputs.self.nixosModules.twistHomeModule
+        inputs.self.nixosModules.homeInputs
         inputs.self.nixosModules.default
         ./.
         {
