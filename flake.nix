@@ -103,7 +103,6 @@
         ./flake-parts/pkgs.nix
         ./flake-parts/emacs.nix
         ./flake-parts/nixos.nix
-        ./flake-parts/home-manager.nix
         ./flake-parts/home-inputs.nix
         # ./flake-parts/cachix-deploy.nix
 
