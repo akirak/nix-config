@@ -9,7 +9,9 @@ let
   enableWayland = true;
 
   defaultBrowser =
-    if config.programs.librewolf.enable then
+    if config.programs.zen-browser.enable then
+      config.programs.zen-browser.package.meta.desktopFileName
+    else if config.programs.librewolf.enable then
       "librewolf.desktop"
     else if config.programs.firefox.enable then
       "firefox.desktop"
