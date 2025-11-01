@@ -1014,11 +1014,11 @@
         "treefmt-nix": "treefmt-nix_2"
       },
       "locked": {
-        "lastModified": 1761879207,
-        "narHash": "sha256-3KFxNFPcUTgdblhVRActXg13s/ZQPBys80CS5S2upU8=",
+        "lastModified": 1761923651,
+        "narHash": "sha256-Qf3bW8bjHAxY2Z+iW/zou+aPP/gUh84tptcu/pf333A=",
         "owner": "numtide",
         "repo": "nix-ai-tools",
-        "rev": "5d56a3cc8c16ea192e5759ee2fb33a6705e0254e",
+        "rev": "b61b4e49d73277611dd363002f0a654442022d4b",
         "type": "github"
       },
       "original": {
