@@ -152,6 +152,7 @@ in
 
     home.packages = [
       pkgs.rclone
+      pkgs.dbeaver-bin
       # pkgs.steam-run
       # pkgs.wine
       # pkgs.tenacity
