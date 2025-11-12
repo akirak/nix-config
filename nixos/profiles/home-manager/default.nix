@@ -28,6 +28,11 @@ You also have to import home-manager.nixosModules.home-manager
       "vboxsf"
     ]);
 
+  environment.pathsToLink = [
+    "/share/applications"
+    "/share/xdg-desktop-portal"
+  ];
+
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
