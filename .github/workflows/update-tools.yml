@@ -2,7 +2,7 @@ name: Update selected tools
 on:
   workflow_dispatch:
   schedule:
-    - cron: '5 0 1/3 * *'
+    - cron: '5 0 1/5 * *'
 jobs:
   update:
     runs-on: ubuntu-latest
