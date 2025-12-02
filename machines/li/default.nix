@@ -33,7 +33,7 @@ in
     # ../../nixos/profiles/wayland/wm/river.nix
     # ../../nixos/profiles/nix/cachix-deploy.nix
     ../../nixos/profiles/postgresql/development.nix
-    ../../nixos/profiles/livebook
+    # ../../nixos/profiles/livebook
     # ../../nixos/profiles/virtualbox-host
     # ../../nixos/profiles/ollama
     ../../nixos/profiles/dpt-rp1
@@ -115,14 +115,14 @@ in
     };
   };
 
-  services.my-livebook = {
-    enable = false;
-    settings = {
-      ipAddress = "127.0.0.1";
-      port = 8200;
-      enableNix = true;
-    };
-  };
+  # services.my-livebook = {
+  #   enable = false;
+  #   settings = {
+  #     ipAddress = "127.0.0.1";
+  #     port = 8200;
+  #     enableNix = true;
+  #   };
+  # };
 
   services.ollama.acceleration = false;
 
