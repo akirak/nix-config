@@ -39,6 +39,9 @@
 
     # Net
     xh
+
+    # Net
+    openssl
   ];
 
   services = {
