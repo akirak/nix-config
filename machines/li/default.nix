@@ -124,8 +124,6 @@ in
   #   };
   # };
 
-  services.ollama.acceleration = false;
-
   services.postgresql = {
     package = pkgs.postgresql_17;
   };

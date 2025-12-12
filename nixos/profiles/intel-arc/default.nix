@@ -35,4 +35,6 @@
     libva-utils
     intel-gpu-tools
   ];
+
+  services.ollama.package = pkgs.ollama-vulkan;
 }
