@@ -73,6 +73,9 @@ in
       # database admin
       # beekeeper-studio
 
+      # design
+      penpot-desktop
+
       # fonts
       customFontPackages.jetbrains-mono-nerdfont
       # Japanese
