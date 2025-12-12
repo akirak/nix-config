@@ -35,7 +35,7 @@ in
     ../../nixos/profiles/postgresql/development.nix
     # ../../nixos/profiles/livebook
     # ../../nixos/profiles/virtualbox-host
-    # ../../nixos/profiles/ollama
+    ../../nixos/profiles/ollama
     ../../nixos/profiles/dpt-rp1
     ../../nixos/profiles/podman/rootless-docker.nix
     ../../nixos/profiles/ai-mcp
@@ -75,7 +75,7 @@ in
     # Install Cloud Hypervisor for use with MicroVM
     pkgs.cloud-hypervisor
 
-    pkgs.unstable-small-unfree.lmstudio
+    # pkgs.unstable-small-unfree.lmstudio
   ];
 
   services.journald.extraConfig = ''
