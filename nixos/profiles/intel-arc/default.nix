@@ -18,8 +18,7 @@
 
   boot.kernelParams = [
     # Check the ID by running `lspci -k | grep -EA3 'VGA|3D|Display'`
-    "i915.force_probe=6021"
-    "i915.enable_guc=3"
+    "xe.force_probe=6021"
   ];
 
   environment.sessionVariables = {
