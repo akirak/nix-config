@@ -206,6 +206,7 @@ in
           # "Coq"
           "Lean4"
           "media"
+          "copilot"
           # "lsp_mode"
         ];
       };
