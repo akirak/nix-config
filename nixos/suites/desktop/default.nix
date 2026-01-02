@@ -1,5 +1,4 @@
 {
-  modulesPath,
   homeUser,
   pkgs,
   lib,
