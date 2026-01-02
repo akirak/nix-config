@@ -8,12 +8,37 @@
 }:
 {
   imports = [
-    (modulesPath + "/profiles/base.nix")
     ../../profiles/yubikey
     ../../profiles/users/primary-group.nix
   ];
 
   environment.systemPackages = [
+    # Mostly copy-and-pasted from nixos/modules/profiles/base.nix in
+    # nixos/nixpkgs.
+    pkgs.ms-sys
+    pkgs.efibootmgr
+    pkgs.efivar
+    pkgs.parted
+    pkgs.gptfdisk
+    pkgs.ddrescue
+    pkgs.ccrypt
+    pkgs.cryptsetup
+    pkgs.vim
+    pkgs.fuse
+    pkgs.fuse3
+    pkgs.sshfs-fuse
+    pkgs.socat
+    pkgs.screen
+    pkgs.tcpdump
+    pkgs.sdparm
+    pkgs.hdparm
+    pkgs.smartmontools
+    pkgs.pciutils
+    pkgs.usbutils
+    pkgs.nvme-cli
+    pkgs.unzip
+    pkgs.zip
+
     pkgs.lsof
     pkgs.psmisc
     pkgs.handlr
