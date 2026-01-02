@@ -12,7 +12,7 @@
 in {
   xdg.configFile."psd/psd.conf".text = ''
     USE_OVERLAYFS="${
-      if pkgs.stdenv.targetPlatform.isLinux
+      if pkgs.stdenv.hostPlatform.isLinux
       then "yes"
       else "no"
     }"

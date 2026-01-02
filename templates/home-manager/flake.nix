@@ -24,42 +24,52 @@
     ];
   };
 
-  outputs = {
-    nixpkgs,
-    flake-parts,
-    home-manager,
-    ...
-  } @ inputs: let
-    inherit (nixpkgs) lib;
+  outputs =
+    {
+      nixpkgs,
+      flake-parts,
+      home-manager,
+      ...
+    }@inputs:
+    let
+      inherit (nixpkgs) lib;
 
-    overlays = [
-      (_final: prev: {
-        unstable = inputs.unstable.legacyPackages.${prev.system};
-        zsh-plugins = inputs.my-overlay.zsh-plugins;
-      })
-      inputs.my-overlay.overlays.default
-    ];
-
-    allowUnfreePredicate = pkg:
-      builtins.elem (lib.getName pkg) [
-        # Explicitly select unfree packages.
-        "symbola"
+      overlays = [
+        (
+          _final: prev:
+          let
+            inherit (prev.stdenv.hostPlatform) system;
+          in
+          {
+            unstable = inputs.unstable.legacyPackages.${system};
+            zsh-plugins = inputs.my-overlay.zsh-plugins;
+          }
+        )
+        inputs.my-overlay.overlays.default
       ];
 
-    pkgsForSystem = system:
-      import nixpkgs {
-        inherit system;
-        inherit overlays;
-        config = {
-          inherit allowUnfreePredicate;
-        };
-      };
+      allowUnfreePredicate =
+        pkg:
+        builtins.elem (lib.getName pkg) [
+          # Explicitly select unfree packages.
+          "symbola"
+        ];
 
-    systems = [
-      "x86_64-linux"
-    ];
-  in
-    flake-parts.lib.mkFlake {inherit inputs;} {
+      pkgsForSystem =
+        system:
+        import nixpkgs {
+          inherit system;
+          inherit overlays;
+          config = {
+            inherit allowUnfreePredicate;
+          };
+        };
+
+      systems = [
+        "x86_64-linux"
+      ];
+    in
+    flake-parts.lib.mkFlake { inherit inputs; } {
       inherit systems;
 
       flake = {
@@ -81,11 +91,13 @@
           };
         };
 
-        checks = lib.genAttrs systems (system:
+        checks = lib.genAttrs systems (
+          system:
           lib.pipe inputs.self.homeConfigurations [
-            (lib.filterAttrs (_: hc: hc.pkgs.system == system))
+            (lib.filterAttrs (_: hc: hc.stdenv.hostPlatform.system == system))
             (builtins.mapAttrs (_: hc: hc.activationPackage))
-          ]);
+          ]
+        );
       };
     };
 }
