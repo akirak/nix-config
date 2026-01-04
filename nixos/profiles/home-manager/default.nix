@@ -22,6 +22,8 @@ You also have to import home-manager.nixosModules.home-manager
   programs.zsh.enable = true;
 
   users.users.${homeUser}.extraGroups =
+    # input group is needed to run xremap without sudo.
+    [ "input" ] ++
     (lib.optional config.virtualisation.docker.enable "docker")
     ++ (lib.optionals config.virtualisation.virtualbox.host.enable [
       "vboxusers"
