@@ -395,6 +395,10 @@ binds {
         spawn "dms" "ipc" "call" "lock" "lock";
     }
 
+    Mod+F9 hotkey-overlay-title="Rebuild NixOS" {
+        spawn "foot" "--title" "Rebuilding NixOS..." "nixos-rebuild-and-notify";
+    }
+
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
     // For example, this is a standard bind to toggle the screen reader (orca).
