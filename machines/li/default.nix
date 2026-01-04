@@ -28,7 +28,7 @@ in
     ../../nixos/profiles/tailscale
     # ../../nixos/profiles/rabbitmq/development.nix
     ../../nixos/profiles/networking/usb-tether1.nix
-    ../../nixos/profiles/wayland/wm/hyprland.nix
+    # ../../nixos/profiles/wayland/wm/hyprland.nix
     ../../nixos/profiles/wayland/wm/niri.nix
     ../../nixos/profiles/wayland/cage/foot.nix
     # ../../nixos/profiles/wayland/wm/river.nix
@@ -189,7 +189,7 @@ in
       }
     ];
 
-    wayland.windowManager.hyprland.enable = true;
+    # wayland.windowManager.hyprland.enable = true;
 
     programs.niri.enable = true;
 
