@@ -61,6 +61,8 @@
       inputs.nixpkgs.follows = "unstable";
     };
 
+    xremap.url = "github:xremap/nix-flake";
+
     hyprland-contrib.url = "github:hyprwm/contrib";
 
     emacs-config = {
