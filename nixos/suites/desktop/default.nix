@@ -69,4 +69,11 @@
     clean.extraArgs = lib.mkDefault "--keep-since 18d --keep 3";
     flake = "/home/${homeUser}/build/nix-config";
   };
+
+  # https://github.com/xremap/xremap?tab=readme-ov-file#nixos-1
+  hardware.uinput.enable = true;
+  boot.kernelModules = [ "uinput" ];
+  services.udev.extraRules = ''
+    KERNEL=="uinput", GROUP="input", TAG+="uaccess"
+  '';
 }

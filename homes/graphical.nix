@@ -105,6 +105,9 @@ in
     associations.added = defaultApplications;
   };
 
+  # See ./modules/xremap.nix for the configuration
+  services.xremap.enable = enableWayland;
+
   systemd.user.services.emacs = {
     Service = {
       Environment = lib.optionals enableWayland [
