@@ -30,6 +30,8 @@ in {
   };
 
   config = {
+    environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
     environment.etc = builtins.listToAttrs (builtins.map
       ({
         name,
