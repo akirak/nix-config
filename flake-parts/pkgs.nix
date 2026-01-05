@@ -23,7 +23,7 @@ let
         };
         # unstable-small = inputs.unstable-small.legacyPackages.${system};
         mcp-servers = inputs.mcp-servers.packages.${system};
-        ai-tools = inputs.nix-ai-tools.packages.${system};
+        ai-tools = inputs.llm-agents.packages.${system};
         disko = inputs.disko.packages.${system}.disko;
         nix-index = inputs.nix-index-database.packages.${system}.nix-index-with-db;
 

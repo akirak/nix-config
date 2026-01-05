@@ -13,7 +13,7 @@ jobs:
           extra_nix_config: |
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
             accept-flake-config = true
-      - run: nix flake update unstable-small nix-ai-tools
+      - run: nix flake update unstable-small llm-agents
       - uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.PAT_FOR_PR }}

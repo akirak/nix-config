@@ -45,7 +45,7 @@
       inputs.nixpkgs.follows = "unstable";
     };
 
-    nix-ai-tools.url = "github:numtide/nix-ai-tools";
+    llm-agents.url = "github:numtide/llm-agents.nix";
 
     # cachix-deploy-flake = {
     #   url = "github:cachix/cachix-deploy-flake";
