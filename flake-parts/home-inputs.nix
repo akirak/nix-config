@@ -9,6 +9,7 @@
               imports = [
                 inputs.zen-browser.homeModules.default
                 inputs.xremap.homeManagerModules.default
+                inputs.impermanence.homeManagerModules.default
               ];
             };
           })

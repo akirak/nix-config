@@ -56,4 +56,22 @@ in
     device = "rpool5/safe/virtualbox";
     fsType = "zfs";
   };
+
+  fileSystems."/no-backup" = {
+    device = "rpool5/local/no-backup";
+    fsType = "zfs";
+  };
+
+  home-manager.users.${homeUser} = {
+    home.persistence."/no-backup" = {
+      directories = [
+        # These directories can contain large temporary files, so they should
+        # not be under automatic snapshots to save storage space.
+        "fleeting"
+        "Downloads"
+        "Desktop"
+      ];
+      # No files
+    };
+  };
 }
