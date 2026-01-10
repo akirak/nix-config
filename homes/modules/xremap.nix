@@ -9,6 +9,36 @@ let
     "C-d" = "delete";
   };
 
+  # Like Command key on Mac.
+  naiveAltToCtrlRemaps = {
+    "M-a" = "C-a";
+    "M-b" = "C-b";
+    "M-c" = "C-c";
+    "M-d" = "C-d";
+    "M-e" = "C-e";
+    "M-f" = "C-f";
+    "M-g" = "C-g";
+    "M-h" = "C-h";
+    "M-i" = "C-i";
+    "M-j" = "C-j";
+    "M-k" = "C-k";
+    "M-l" = "C-l";
+    "M-m" = "C-m";
+    "M-n" = "C-n";
+    "M-o" = "C-o";
+    "M-p" = "C-p";
+    "M-q" = "C-q";
+    "M-r" = "C-r";
+    "M-s" = "C-s";
+    "M-t" = "C-t";
+    "M-u" = "C-u";
+    "M-v" = "C-v";
+    "M-w" = "C-w";
+    "M-x" = "C-x";
+    "M-y" = "C-y";
+    "M-z" = "C-z";
+  };
+
   macBasicRemaps = {
     "M-c" = "C-c";
     "M-v" = "C-v";
@@ -17,6 +47,9 @@ let
     "M-a" = "C-a";
     "M-r" = "C-r";
     "M-l" = "C-l";
+    "M-w" = "C-w";
+    "M-t" = "C-t";
+    "M-s" = "C-s";
   };
 in
 {
@@ -31,7 +64,15 @@ in
   ];
 
   services.xremap.config = {
-    # modmap = [ ];
+    modmap = [
+      {
+        name = "Native";
+        mode = "default";
+        remap = {
+          CapsLock = "Control_L";
+        };
+      }
+    ];
 
     # Use `niri msg pick-window` to identify the application ID.
     keymap = [
@@ -44,7 +85,7 @@ in
             "foot"
           ];
         };
-        remap = basicEmacsRemaps // macBasicRemaps;
+        remap = basicEmacsRemaps // naiveAltToCtrlRemaps;
       }
 
       {
