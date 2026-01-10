@@ -38,19 +38,6 @@ let
     "M-y" = "C-y";
     "M-z" = "C-z";
   };
-
-  macBasicRemaps = {
-    "M-c" = "C-c";
-    "M-v" = "C-v";
-    "M-x" = "C-x";
-    "M-f" = "C-f";
-    "M-a" = "C-a";
-    "M-r" = "C-r";
-    "M-l" = "C-l";
-    "M-w" = "C-w";
-    "M-t" = "C-t";
-    "M-s" = "C-s";
-  };
 in
 {
   # This module depends on https://github.com/xremap/nix-flake. See
