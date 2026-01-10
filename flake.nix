@@ -123,6 +123,7 @@
         ./machines/shu/flake-module.nix
         ./machines/hui/flake-module.nix
         ./machines/zheng/flake-module.nix
+        ./machines/tianyu/flake-module.nix
 
         ./denix/flake-module.nix
       ];
