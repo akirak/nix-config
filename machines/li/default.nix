@@ -26,6 +26,7 @@ in
     ../../nixos/profiles/nix
     ../../nixos/profiles/sudo
     ../../nixos/profiles/tailscale
+    ../../nixos/profiles/cloud-hypervisor
     # ../../nixos/profiles/rabbitmq/development.nix
     ../../nixos/profiles/networking/usb-tether1.nix
     # ../../nixos/profiles/wayland/wm/hyprland.nix
@@ -72,9 +73,6 @@ in
     pkgs.clinfo
     pkgs.hunspellDicts.en_US
     pkgs.hunspellDicts.en_GB-ise
-
-    # Install Cloud Hypervisor for use with MicroVM
-    pkgs.cloud-hypervisor
 
     # pkgs.unstable-small-unfree.lmstudio
   ];
