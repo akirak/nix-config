@@ -1,4 +1,4 @@
-{ homeUser, pkgs, lib, ... }:
+{ homeUser, pkgs, ... }:
 {
   environment.systemPackages = [
     pkgs.cloud-hypervisor
