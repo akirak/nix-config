@@ -60,6 +60,8 @@ in
   fileSystems."/no-backup" = {
     device = "rpool5/local/no-backup";
     fsType = "zfs";
+    # Impermanence requirement
+    neededForBoot = true;
   };
 
   home-manager.users.${homeUser} = {
