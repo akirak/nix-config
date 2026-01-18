@@ -36,7 +36,6 @@ in
 
       ai-tools.codex
       ai-tools.codex-acp
-      unstable-small-unfree.aider-chat
       ai-tools.claude-code
       ai-tools.claude-code-acp
       ai-tools.copilot-cli
