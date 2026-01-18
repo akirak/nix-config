@@ -28,6 +28,7 @@ let
         nix-index = inputs.nix-index-database.packages.${system}.nix-index-with-db;
 
         zen-browser = inputs.zen-browser.packages.${system}.default;
+        ranmaru = inputs.ranmaru.packages.${system}.default;
       }
     )
   ];

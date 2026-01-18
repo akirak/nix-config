@@ -67,6 +67,7 @@
     };
 
     xremap.url = "github:xremap/nix-flake";
+    ranmaru.url = "github:akirak/ranmaru";
 
     hyprland-contrib.url = "github:hyprwm/contrib";
 

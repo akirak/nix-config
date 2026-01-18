@@ -41,6 +41,9 @@ in
       ai-tools.copilot-cli
       ai-tools.opencode
 
+      # Required for running Org mode LSP
+      ranmaru
+
       # Used to run MCP servers.
       (onlySingleBin pkgs.nodejs "npx")
     ])
