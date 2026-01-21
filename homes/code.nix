@@ -56,4 +56,6 @@ in
   home.file.".npmrc".text = lib.mkDefault ''
     ignore-scripts=true
   '';
+
+  home.file.".codex/AGENTS.md".source = ./etc/agents/AGENTS.md;
 }
