@@ -128,6 +128,7 @@ in
         # Non-standard
         "!.aider.conf.yml"
         "!.aiderignore"
+        ".agent-shell"
       ];
 
       includes = lib.pipe ([ cfg.defaultIdentity ] ++ cfg.extraIdentities) [
