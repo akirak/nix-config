@@ -28,6 +28,7 @@
     hyperfine
     just
     tailspin
+    dasel
 
     # Media
     git-annex
