@@ -41,6 +41,8 @@ in
       ai-tools.copilot-cli
       ai-tools.opencode
 
+      ai-tools.agent-browser
+
       # Required for running Org mode LSP
       ranmaru
 
