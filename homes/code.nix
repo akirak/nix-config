@@ -42,6 +42,7 @@ in
       ai-tools.opencode
 
       ai-tools.agent-browser
+      ai-tools.openskills
 
       # Required for running Org mode LSP
       ranmaru
