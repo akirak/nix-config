@@ -334,6 +334,26 @@ window-rule {
     open-floating true
 }
 
+// Terminal
+window-rule {
+    match app-id=r#"^foot$"#
+    default-column-width { proportion 0.33; }
+}
+
+window-rule {
+    match app-id=r#"^mpv$"#
+
+    open-floating true
+    max-width 1200
+    max-height 800
+}
+
+window-rule {
+    match title=r#"^Rebuilding NixOS"#
+
+    open-focused false
+}
+
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
