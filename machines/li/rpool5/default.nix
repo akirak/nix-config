@@ -14,6 +14,8 @@ in
   fileSystems."/home" = {
     device = "rpool5/safe/home";
     fsType = "zfs";
+    # Needed because of impermanence
+    neededForBoot = true;
   };
 
   # You will require github:nix-community/impermanence to use this
