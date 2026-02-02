@@ -138,6 +138,19 @@ in
       ../../homes/graphical.nix
     ];
 
+    # Assuming /no-backup is on a separate file system without automatic
+    # snapshots. See rpool5/default.nix.
+    home.persistence."/no-backup" = {
+      directories = [
+        # These directories can contain large temporary files. To save storage
+        # space, they should not be under automatic snapshots.
+        "fleeting"
+        "Downloads"
+        "Desktop"
+      ];
+      # No files
+    };
+
     programs.chromium = {
       enable = true;
       package = pkgs.ungoogled-chromium;

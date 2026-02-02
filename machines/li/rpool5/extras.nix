@@ -63,17 +63,4 @@ in
     # Impermanence requirement
     neededForBoot = true;
   };
-
-  home-manager.users.${homeUser} = {
-    home.persistence."/no-backup" = {
-      directories = [
-        # These directories can contain large temporary files, so they should
-        # not be under automatic snapshots to save storage space.
-        "fleeting"
-        "Downloads"
-        "Desktop"
-      ];
-      # No files
-    };
-  };
 }
