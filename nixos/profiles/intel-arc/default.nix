@@ -6,13 +6,12 @@
 {
   hardware.graphics = {
     enable = true;
+    enable32Bit = true;
     extraPackages = with pkgs; [
       intel-media-driver
-      intel-ocl
       # nixos-unstable
       vpl-gpu-rt
       intel-compute-runtime
-      intel-vaapi-driver
     ];
   };
 
@@ -22,7 +21,6 @@
   ];
 
   environment.sessionVariables = {
-    VDPAU_DRIVER = "va_gl";
     LIBVA_DRIVER_NAME = "iHD";
   };
   hardware.intelgpu.driver = "xe";
