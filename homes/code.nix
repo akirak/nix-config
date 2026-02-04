@@ -35,11 +35,8 @@ in
       just-lsp
 
       ai-tools.codex
-      ai-tools.codex-acp
-      ai-tools.claude-code
-      ai-tools.claude-code-acp
       ai-tools.copilot-cli
-      ai-tools.opencode
+      ai-tools.pi
 
       ai-tools.agent-browser
       ai-tools.openskills
