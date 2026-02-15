@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   imports = [
     ../sessions.nix
@@ -25,9 +26,11 @@
     enableCalendarEvents = true; # Calendar integration (khal)
   };
 
-  # environment.systemPackages = [
-  #   pkgs.wev
-  # ];
+  environment.systemPackages = [
+    # This enables XWayland.
+    # See https://niri-wm.github.io/niri/Xwayland.html
+    pkgs.xwayland-satellite
+  ];
 
   wayland.sessions = [
     {
