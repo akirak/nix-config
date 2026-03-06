@@ -118,12 +118,14 @@
 
         ./nixos/models/asus-br1100/flake-module.nix
 
+        # This configuration is currently under migration to a private
+        # repository. Some hosts have been removed.
         ./machines/li/flake-module.nix
-        ./machines/yang/flake-module.nix
-        ./machines/wang/flake-module.nix
-        ./machines/shu/flake-module.nix
+        # ./machines/yang/flake-module.nix
+        # ./machines/wang/flake-module.nix
+        # ./machines/shu/flake-module.nix
         ./machines/hui/flake-module.nix
-        ./machines/zheng/flake-module.nix
+        # ./machines/zheng/flake-module.nix
         ./machines/tianyu/flake-module.nix
 
         ./denix/flake-module.nix
