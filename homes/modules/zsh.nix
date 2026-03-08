@@ -69,12 +69,6 @@
       zstyle :fzy:file command fd -t f
       zstyle :fzy:cd command fd -t d
 
-      # Support directory tracking on emacs-libvterm.
-      # https://github.com/akermu/emacs-libvterm#directory-tracking
-      function chpwd() {
-          print -Pn "\e]51;A$(pwd)\e\\";
-      }
-
       function pick() {
         local arg
         fzy | read -r arg && "$@" "$arg"
