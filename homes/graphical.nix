@@ -10,7 +10,7 @@ let
 
   defaultBrowser =
     if config.programs.zen-browser.enable then
-      config.programs.zen-browser.package.meta.desktopFileName
+      null
     else if config.programs.librewolf.enable then
       "librewolf.desktop"
     else if config.programs.firefox.enable then
