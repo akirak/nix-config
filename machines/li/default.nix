@@ -180,6 +180,7 @@ in
       package-import-method=copy
 
       ignore-scripts=true
+      min-release-age=3
     '';
 
     services.kanshi.settings = [
