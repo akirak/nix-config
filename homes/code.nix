@@ -54,7 +54,9 @@ in
     ]);
 
   home.file.".npmrc".text = lib.mkDefault ''
+    # Security settings
     ignore-scripts=true
+    min-release-age=3
   '';
 
   home.file.".codex/AGENTS.md".source = ./etc/agents/AGENTS.md;
